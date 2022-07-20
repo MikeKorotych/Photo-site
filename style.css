@@ -21,6 +21,8 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   height: 90px;
+  width: 100%;
+  z-index: 100;
 }
 
 .nav-logo {
@@ -441,4 +443,9 @@ svg {
   height: 100%;
   padding: 0;
   margin: 0;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #000;
 }/*# sourceMappingURL=style.css.map */

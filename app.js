@@ -1,5 +1,25 @@
 const navLinks = document.querySelectorAll(".nav-link");
 
+const btns = document.querySelectorAll(".btn");
+const read = document.querySelectorAll("#read");
+const nav = document.querySelector(".nav");
+const navHeight = nav.getBoundingClientRect().height;
+const header = document.querySelector(".section-1");
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+headerObserver.observe(header);
+
 anime({
   targets: navLinks,
   translateX: [50, 0],
@@ -21,9 +41,6 @@ anime({
   opacity: 0.5,
   easing: "easeInOutQuad",
 });
-
-const btns = document.querySelectorAll(".btn");
-const read = document.querySelectorAll("#read");
 
 btns.forEach(function (btn) {
   btn.addEventListener("mouseenter", function (e) {
