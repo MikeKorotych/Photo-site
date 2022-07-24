@@ -109,7 +109,7 @@ confirm.addEventListener("click", (e) => {
 // });
 
 const itemWrapper = document.querySelector(".section-2__item--wrapper");
-const items = document.querySelectorAll(".section-2__item");
+const items = document.querySelectorAll(".btn__item");
 
 // itemWrapper.addEventListener("click", (e) => {
 //   const clicked = e.target.closest(".btn");
@@ -128,8 +128,6 @@ items.forEach((i) =>
     const clicked = e.target.closest(".btn");
     if (!clicked) return;
     const num = clicked.dataset.number.slice(-1);
-    console.log(num);
-
     if (i.classList.contains(clicked.dataset.number)) {
       // i.classList.toggle("active");
       // overlay.classList.toggle("hidden");
@@ -149,3 +147,5 @@ items.forEach((i) =>
     }
   })
 );
+
+// Links Anim

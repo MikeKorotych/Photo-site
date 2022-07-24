@@ -256,7 +256,7 @@ svg {
 
 .section-4__left--wrapper {
   position: absolute;
-  width: 600px;
+  width: 40vw;
   height: 314px;
   padding: 40px;
   font-weight: 300;
@@ -494,4 +494,13 @@ svg {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+footer a {
+  transition: all 0.2s ease-in;
+  position: relative;
+}
+
+footer a:hover {
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */
